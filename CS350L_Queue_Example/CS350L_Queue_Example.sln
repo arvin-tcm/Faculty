@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS350L_Queue_Example", "CS350L_Queue_Example\CS350L_Queue_Example.vcxproj", "{BC0F9A36-B8E9-4C25-8CC7-2D0078A24102}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC0F9A36-B8E9-4C25-8CC7-2D0078A24102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC0F9A36-B8E9-4C25-8CC7-2D0078A24102}.Debug|Win32.Build.0 = Debug|Win32
+		{BC0F9A36-B8E9-4C25-8CC7-2D0078A24102}.Release|Win32.ActiveCfg = Release|Win32
+		{BC0F9A36-B8E9-4C25-8CC7-2D0078A24102}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
