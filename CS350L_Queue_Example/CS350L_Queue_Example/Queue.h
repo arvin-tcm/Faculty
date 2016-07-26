@@ -16,6 +16,10 @@ typedef struct queue
 	Node* head;
 	Node* tail;
 }Queue;
+typedef enum
+{
+	false, true
+}bool;
 // Private function to create a new node with initialized data
 static Node* newNode();
 // Function to create a new Queue with initialization
@@ -25,7 +29,7 @@ void enQueue(Queue*, ValueT);
 // Dequeue to remove node at head
 ValueT deQueue(Queue*);
 // Check the queue contains no nodes inside 
-int isEmpty(Queue*);
+bool isEmpty(Queue*);
 // Empty all nodes inside the queue
 void emptyQueue(Queue*);
 // Free all nodes and queue itself
