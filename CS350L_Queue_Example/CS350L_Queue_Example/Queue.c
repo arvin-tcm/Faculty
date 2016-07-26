@@ -37,7 +37,7 @@ ValueT deQueue(Queue* queue)
 {
 	if (isEmpty(queue))
 	{
-		return -1;
+		return false;
 	}
 	Node* oldHead = queue->head;
 	ValueT output = queue->head->data;

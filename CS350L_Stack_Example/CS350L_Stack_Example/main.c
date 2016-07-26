@@ -4,6 +4,7 @@ int main()
 {
 	// Create Stack 
 	Stack* myStack = newStack();
+	pop(myStack);
 	printf("Is empty? %d\n", isEmpty(myStack));
 	// Pushing elements into Stack
 	for (int i = 0; i < 5; i++)
