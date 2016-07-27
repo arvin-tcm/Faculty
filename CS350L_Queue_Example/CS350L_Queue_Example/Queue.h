@@ -13,8 +13,8 @@ typedef struct node
 // Structure for the Queue management
 typedef struct queue
 {
-	Node* head;
-	Node* tail;
+	Node* front;
+	Node* rear;
 }Queue;
 typedef enum
 {

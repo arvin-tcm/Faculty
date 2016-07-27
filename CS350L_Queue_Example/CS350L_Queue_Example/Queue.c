@@ -17,13 +17,13 @@ void enQueue(Queue* queue, ValueT input)
 	node->nextPtr = NULL;
 	if (isEmpty(queue))
 	{
-		queue->head = node;
-		queue->tail = node;
+		queue->front = node;
+		queue->rear = node;
 	}
 	else
 	{
-		queue->tail->nextPtr = node;
-		queue->tail = node;
+		queue->rear->nextPtr = node;
+		queue->rear = node;
 	}
 }
 // Dequeue to remove node at head
@@ -33,13 +33,13 @@ ValueT deQueue(Queue* queue)
 	{
 		return false;
 	}
-	Node* oldHead = queue->head;
-	ValueT output = queue->head->data;
-	queue->head = queue->head->nextPtr;
+	Node* oldHead = queue->front;
+	ValueT output = queue->front->data;
+	queue->front = queue->front->nextPtr;
 	// additional memory address handling required
-	if (!queue->head)
+	if (!queue->front)
 	{
-		queue->tail = NULL;
+		queue->rear = NULL;
 	}
 	free(oldHead);
 	return output;
@@ -48,7 +48,7 @@ ValueT deQueue(Queue* queue)
 bool isEmpty(Queue* queue)
 {
 	if (!queue) return false;
-	if (!queue->head && !queue->tail) return true;
+	if (!queue->front && !queue->rear) return true;
 	return false;
 }
 // Empty all nodes inside the queue
