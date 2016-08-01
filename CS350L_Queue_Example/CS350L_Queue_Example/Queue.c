@@ -53,7 +53,7 @@ ValueT deQueue(Queue* queue)
 // Check the queue contains no nodes inside 
 bool isEmpty(Queue* queue)
 {
-	if (!queue) return false;
+	if (!queue) return true;
 	if (!queue->front && !queue->rear) return true;
 	return false;
 }
@@ -71,7 +71,6 @@ void freeQueue(Queue* queue)
 	emptyQueue(queue);
 	free(queue);
 }
-
 void printQueue(Queue* queue)
 {
 	Node* iterator = queue->front;
