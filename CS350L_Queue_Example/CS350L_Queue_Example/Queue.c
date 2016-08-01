@@ -2,12 +2,18 @@
 // Private function to create a new node with initialized data
 static Node* newNode()
 {
-
+	Node* node = (Node*)malloc(sizeof(Node));
+	node->data;
+	node->nextPtr = NULL;
+	return node;
 }
 // Function to create a new Queue with initialization
 Queue* newQueue()
 {
-	
+	Queue* queue = (Queue*)malloc(sizeof(Queue));
+	queue->front = NULL;
+	queue->rear = NULL;
+	return queue;
 }
 // Enqueue to add node at tail
 void enQueue(Queue* queue, ValueT input)
@@ -54,11 +60,24 @@ bool isEmpty(Queue* queue)
 // Empty all nodes inside the queue
 void emptyQueue(Queue* queue)
 {
-
+	while (queue->front != NULL)
+	{
+		deQueue(queue);
+	}
 }
 // Free all nodes and queue itself
 void freeQueue(Queue* queue)
 {
 	emptyQueue(queue);
 	free(queue);
+}
+
+void printQueue(Queue* queue)
+{
+	Node* iterator = queue->front;
+	while (iterator != NULL)
+	{
+		printf("%d\t%d\n", iterator->data, iterator);
+		iterator = iterator->nextPtr;
+	}
 }
