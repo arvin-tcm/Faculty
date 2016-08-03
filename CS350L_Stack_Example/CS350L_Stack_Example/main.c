@@ -1,5 +1,4 @@
 #include"Stack.h"
-#include<crtdbg.h>
 int main()
 {
 	// Create Stack 
@@ -20,11 +19,5 @@ int main()
 	{
 		printf("value : %d\n", pop(myStack));
 	}
-	// Memory usage check
-	printf("memory leaks before free : %d\n", _CrtDumpMemoryLeaks());
-	emptyStack(myStack);
-	printf("memory leaks after emptyStack() function : %d\n", _CrtDumpMemoryLeaks());
-	freeStack(myStack);
-	printf("memory leaks after freeStack() function : %d\n", _CrtDumpMemoryLeaks());
 	return 0;
 }
