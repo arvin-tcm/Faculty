@@ -19,5 +19,7 @@ int main()
 	{
 		printf("value : %d\n", pop(myStack));
 	}
+	emptyStack(myStack);
+	freeStack(myStack);
 	return 0;
 }
